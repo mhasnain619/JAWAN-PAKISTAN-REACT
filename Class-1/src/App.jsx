@@ -6,6 +6,8 @@ function App() {
     <>
       <div className='backGr'>
         <h1>Hello React</h1>
+        <p>React is a JavaScript library for building user interfaces.</p>
+
       </div>
     </>
   )
