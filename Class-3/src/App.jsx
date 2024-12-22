@@ -5,13 +5,15 @@ import Card from "./Components/Card/Card";
 import { Data } from "./data";
 
 const App = () => {
-  console.log(Data);
 
   return (
     <>
-      {Data.map((e, i) => {
-        return <Card key={i} id={e.id} imgSrc={e.imgSrc} title={e.title} desc={e.desc} />;
-      })}
+      {Data ? (
+        Data.map((e, i) => {
+          return <Card key={i} id={e.id} imgSrc={e.image} title={e.title} desc={e.description} />;
+        })
+      ) : <h3>Data Not Found...!</h3>}
+
     </>
   );
 };
