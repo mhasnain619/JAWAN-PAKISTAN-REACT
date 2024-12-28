@@ -43,6 +43,12 @@ export const Data = [
         title: "Title 05",
         desc: "This is a sample Text 05",
     },
+    {
+        id: 15,
+        imgSrc: "https://cdn-icons-png.flaticon.com/512/219/219969.png",
+        title: "Title 14",
+        desc: "This is a sample Text 14",
+    },
 
     {
         id: 7,
@@ -80,6 +86,12 @@ export const Data = [
         desc: "This is a sample Text 11",
     },
     {
+        id: 16,
+        imgSrc: "https://cdn-icons-png.flaticon.com/512/219/219969.png",
+        title: "Title 14",
+        desc: "This is a sample Text 14",
+    },
+    {
         id: 12,
         imgSrc: "https://cdn-icons-png.flaticon.com/512/4042/4042422.png",
         title: "Title 12",
@@ -98,4 +110,6 @@ export const Data = [
         title: "Title 14",
         desc: "This is a sample Text 14",
     },
+
+
 ];

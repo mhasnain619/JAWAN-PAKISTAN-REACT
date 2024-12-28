@@ -2,15 +2,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Cardpo from './Components/Card/Card';
 import { Data } from '../Data'
-import { IoHomeOutline } from "react-icons/io5";
-import NavScrollExample from './Components/Navbar/Navbar';
+import DrawerAppBar from './Components/Navbar/Navbar';
 
 function App() {
   return (
     <>
-      <NavScrollExample />
+      <DrawerAppBar />
       <div className='mainContainer'>
-        {/* <IoHomeOutline /> */}
         {Data ? (
           Data.map((e, i) => {
             return (
