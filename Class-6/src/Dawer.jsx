@@ -18,13 +18,16 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { GoHome } from 'react-icons/go';
+import { FaPeopleGroup } from 'react-icons/fa6';
+import { IoMdContact } from 'react-icons/io';
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 const pages = [
-    { name: 'Page 1', icon: <InboxIcon /> },
-    { name: 'Page 2', icon: <InboxIcon /> },
-    { name: 'Page 3', icon: <MailIcon /> },
-    { name: 'Page 4', icon: <InboxIcon /> },
+    { name: 'Home', icon: <GoHome /> },
+    { name: 'About', icon: <FaPeopleGroup /> },
+    { name: 'Contact Us', icon: <IoMdContact /> },
+    { name: 'Desclimer', icon: <InboxIcon /> },
 
 ]
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -97,6 +100,7 @@ export default function PersistentDrawerLeft() {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
+
             <AppBar position="fixed" open={open}>
                 <Toolbar>
                     <IconButton
@@ -114,7 +118,7 @@ export default function PersistentDrawerLeft() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                        Persistent drawer
+                        Dashboard
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -138,13 +142,13 @@ export default function PersistentDrawerLeft() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                    {pages.map((text, index) => (
                         <ListItem key={text} disablePadding>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                            <ListItemButton >
+                                <ListItemIcon key={index}>
+                                    {text.icon}
                                 </ListItemIcon>
-                                <ListItemText primary={text} />
+                                <ListItemText primary={text.name} />
                             </ListItemButton>
                         </ListItem>
                     ))}
