@@ -3,11 +3,15 @@ import './App.css'
 import TextField from '@mui/material/TextField';
 import PrimarySearchAppBar from './AppBar';
 import DashboardLayoutBasic from './Dashboard';
+import ResponsiveAppBar from './AppBar';
+import PersistentDrawerLeft from './Dawer';
 function App() {
 
   return (
     <>
-      <DashboardLayoutBasic />
+      {/* <ResponsiveAppBar /> */}
+      <PersistentDrawerLeft />
+      {/* <DashboardLayoutBasic /> */}
     </>
   )
 }
