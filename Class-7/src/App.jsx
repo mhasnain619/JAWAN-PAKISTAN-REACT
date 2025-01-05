@@ -2,6 +2,9 @@
 import { useState } from 'react'
 import './App.css'
 import CounterApp from './CounterApp'
+import Todo from './Todo'
+import BlubOnOff from './BlubOnOff'
+import Status from './Status'
 
 function App() {
 
@@ -15,9 +18,10 @@ function App() {
     <>
       {/* <h1 id='username'>{userName}</h1>
       <button onClick={updateName}>Change Name</button> */}
-      <CounterApp />
-
-
+      {/* <CounterApp />
+      <Todo />
+      <BlubOnOff /> */}
+      <Status />
     </>
   )
 }

@@ -8,11 +8,15 @@ const CounterApp = () => {
     const decri = () => {
         setCounter(counter <= 0 ? 0 : counter--)
     }
+    const reset = () => {
+        setCounter(0)
+    }
     return (
         <>
             <h1>{counter}</h1>
             <button onClick={inceri}>Inceriment+</button>
             <button onClick={decri}>Decriment-</button>
+            <button onClick={reset}>Reset</button>
         </>
     )
 }
