@@ -19,8 +19,8 @@ function App() {
       {/* <h1 id='username'>{userName}</h1>
       <button onClick={updateName}>Change Name</button> */}
       {/* <CounterApp />
-      <Todo />
-      <BlubOnOff /> */}
+      <Todo /> */}
+      <BlubOnOff />
       <Status />
     </>
   )

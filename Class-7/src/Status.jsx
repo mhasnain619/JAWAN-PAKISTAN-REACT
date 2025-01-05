@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Status = () => {
-    const [isLogedIn, setIsLogedin] = useState(true)
+    const [isLogedIn, setIsLogedin] = useState()
     return (
         <>
             {
@@ -13,7 +13,7 @@ const Status = () => {
             }
             <button onClick={() => {
                 setIsLogedin(!isLogedIn)
-            }}>{isLogedIn ? 'LogOut' : 'Logout'}</button>
+            }}>{isLogedIn ? 'LogOut' : 'LogIn'}</button>
 
         </>
     )
