@@ -18,10 +18,10 @@ function App() {
     <>
       {/* <h1 id='username'>{userName}</h1>
       <button onClick={updateName}>Change Name</button> */}
-      {/* <CounterApp />
-      <Todo /> */}
-      <BlubOnOff />
-      <Status />
+      {/* <CounterApp /> */}
+      <Todo />
+      {/* <BlubOnOff /> */}
+      {/* <Status /> */}
     </>
   )
 }

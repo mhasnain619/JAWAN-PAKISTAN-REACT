@@ -47,7 +47,6 @@ const RegistrationForm = () => {
                     {userArray.map((e, i) => {
                         return (<>
                             <li key={i}>{e.userName}</li>
-                            <li key={i}>{e.userEmail}</li>
                         </>
                         )
                     })}
