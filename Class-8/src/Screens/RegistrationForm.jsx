@@ -45,7 +45,11 @@ const RegistrationForm = () => {
             <div>
                 <ul>
                     {userArray.map((e, i) => {
-                        return <li key={i}>{e.userName}</li>
+                        return (<>
+                            <li key={i}>{e.userName}</li>
+                            <li key={i}>{e.userEmail}</li>
+                        </>
+                        )
                     })}
                 </ul>
             </div>
