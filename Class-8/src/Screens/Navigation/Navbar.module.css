@@ -1,0 +1,19 @@
+.mainContainer {
+    background-color: aqua;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    width: -webkit-fill-available;
+}
+
+li {
+    list-style-type: none;
+}

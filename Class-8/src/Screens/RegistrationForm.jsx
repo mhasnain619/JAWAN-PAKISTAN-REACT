@@ -14,8 +14,9 @@ const RegistrationForm = () => {
     let [userArray, setUserArray] = useState([])
     const handleSubmit = () => {
         setUserArray([...userArray, userObj])
-        setUserObj({ userName: '', userEmail: '', userPassword: '' })
+        console.log(userArray);
 
+        setUserObj({ userName: '', userEmail: '', userPassword: '' })
     }
     return (
         <>
