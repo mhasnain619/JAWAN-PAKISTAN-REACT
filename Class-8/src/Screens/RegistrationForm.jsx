@@ -1,11 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import Input from './Input'
-
+import CustomizedTables from './Table.jsx'
 const RegistrationForm = () => {
-    // let [userName, setUserName] = useState('')
-    // let [userEmail, setUserEmail] = useState('')
-    // let [userPassword, setUserPassword] = useState('')
+
 
     let [userObj, setUserObj] = useState({
         userName: '',
@@ -42,16 +40,7 @@ const RegistrationForm = () => {
                 label='Password: '
                 type='password' /><br />
             <button onClick={handleSubmit} >get Value</button>
-            <div>
-                <ul>
-                    {userArray.map((e, i) => {
-                        return (<>
-                            <li key={i}>{e.userName}</li>
-                        </>
-                        )
-                    })}
-                </ul>
-            </div>
+            <CustomizedTables data={userArray} />
         </div>
     )
 }
