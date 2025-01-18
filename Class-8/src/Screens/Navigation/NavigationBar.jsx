@@ -1,19 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styles from '../Navigation/Navbar.module.css'
 const NavigationBar = () => {
     return (
         <div className={styles.mainContainer}>
             <ul>
-                <li>
-                    <Link to='/form'>
+                <li className={styles.list1}>
+                    <NavLink to='/form'>
                         Form
-                    </Link>
+                    </NavLink>
                 </li>
-                <li>
-                    <Link to='/table'>
+                <li className={styles.list2}>
+                    <NavLink to='/table'>
                         Table
-                    </Link>
+                    </NavLink>
                 </li>
 
             </ul>

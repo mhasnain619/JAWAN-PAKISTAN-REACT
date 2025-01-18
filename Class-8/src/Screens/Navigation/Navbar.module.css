@@ -8,10 +8,16 @@
 
 }
 
+
 ul {
     display: flex;
     justify-content: space-around;
     width: -webkit-fill-available;
+}
+
+.list1,
+.list2 {
+    list-style: none;
 }
 
 li {
