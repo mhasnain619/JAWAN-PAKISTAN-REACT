@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import Input from './Input'
 import CustomizedTables from './Table.jsx'
+import Button from '@mui/material/Button';
 const RegistrationForm = () => {
 
 
@@ -16,32 +17,31 @@ const RegistrationForm = () => {
         setUserObj({ userName: '', userEmail: '', userPassword: '' })
 
     }
-    const getValue = () => {
-        console.log(userObj);
-        setUserObj('')
-    }
-
     return (
-        <div>
-            <h1>Rgistration Form</h1>
-            <Input
-                value={userObj.userName}
-                onChangeEvent={(e) => setUserObj({ ...userObj, userName: e.target.value })}
-                label='Name : '
-                type='text' /><br />
-            <Input
-                value={userObj.userEmail}
-                onChangeEvent={(e) => setUserObj({ ...userObj, userEmail: e.target.value })}
-                label='Email : '
-                type='email' /><br />
-            <Input
-                value={userObj.userPassword}
-                onChangeEvent={(e) => setUserObj({ ...userObj, userPassword: e.target.value })}
-                label='Password: '
-                type='password' /><br />
-            <button onClick={handleSubmit} >get Value</button>
+        <>
+            <div style={{ marginBottom: '20px' }}>
+                <h1>Rgistration Form</h1>
+                <Input
+                    onChangeEvent={(e) => setUserObj({ ...userObj, userName: e.target.value })}
+                    value={userObj.userName}
+                    label="Name"
+                    variant="outlined" />
+                <Input
+                    value={userObj.userEmail}
+                    onChangeEvent={(e) => setUserObj({ ...userObj, userEmail: e.target.value })}
+                    label='Email'
+                    type='email' />
+                <Input
+                    value={userObj.userPassword}
+                    onChangeEvent={(e) => setUserObj({ ...userObj, userPassword: e.target.value })}
+                    label='Password'
+                    type='password' />
+                <Button sx={{ height: '55px' }} onClick={handleSubmit} variant="contained" size="large">
+                    Add to Table
+                </Button>
+            </div>
             <CustomizedTables data={userArray} />
-        </div>
+        </>
     )
 }
 
