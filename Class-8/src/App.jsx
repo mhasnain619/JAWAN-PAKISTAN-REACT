@@ -7,6 +7,7 @@ import DrawerAppBar from './Screens/Navigation/NavigationBar'
 import NotFound from './Screens/NotFound'
 import Home from './Screens/Home'
 import User from './Screens/User'
+import Users from './Screens/Navigation/Users'
 function App() {
 
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/form' element={<RegistrationForm />} />
+        <Route path='/users' element={<Users />} />
         <Route path='/table' element={<CustomizedTables />} />
         <Route path='*' element={<NotFound />} />
 
