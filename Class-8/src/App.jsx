@@ -4,14 +4,22 @@ import './App.css'
 import RegistrationForm from './Screens/RegistrationForm'
 import CustomizedTables from './Screens/Table'
 import DrawerAppBar from './Screens/Navigation/NavigationBar'
+import NotFound from './Screens/NotFound'
+import Home from './Screens/Home'
+import User from './Screens/User'
 function App() {
 
   return (
     <>
       <DrawerAppBar />
       <Routes>
+        <Route path='/' element={<Home />} />
         <Route path='/form' element={<RegistrationForm />} />
         <Route path='/table' element={<CustomizedTables />} />
+        <Route path='*' element={<NotFound />} />
+
+        {/* Dynamic Routing */}
+        <Route path='/user/:id' element={<User />} />
       </Routes>
 
     </>
