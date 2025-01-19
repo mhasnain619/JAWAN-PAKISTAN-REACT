@@ -17,7 +17,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/form' element={<RegistrationForm />} />
         <Route path='/table' element={<CustomizedTables />} />
-        <Route path='/about' element={<About />} />
+        <Route path='/about/:id' element={<About />} />
         <Route path='*' element={<NotFound />} />
 
         {/* Dynamic Routing */}

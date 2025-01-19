@@ -9,7 +9,8 @@ const Home = () => {
         city: 'Karachi'
     }
     const gote = () => {
-        navigate('/about', { state: obj })
+        navigate(`/about/${obj.name}`)
+        setSearchParams(obj);
     }
     return (
         <div>
