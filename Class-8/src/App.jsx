@@ -5,9 +5,9 @@ import RegistrationForm from './Screens/RegistrationForm'
 import CustomizedTables from './Screens/Table'
 import DrawerAppBar from './Screens/Navigation/NavigationBar'
 import NotFound from './Screens/NotFound'
+import About from './Screens/About'
 import Home from './Screens/Home'
 import User from './Screens/User'
-import Users from './Screens/Navigation/Users'
 function App() {
 
   return (
@@ -16,12 +16,21 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/form' element={<RegistrationForm />} />
-        <Route path='/users' element={<Users />} />
         <Route path='/table' element={<CustomizedTables />} />
+        <Route path='/about' element={<About />} />
         <Route path='*' element={<NotFound />} />
 
         {/* Dynamic Routing */}
-        <Route path='/user/:id' element={<User />} />
+
+        {/* Dynamic Params */}
+
+        {/* <Route path='/user/:id' element={<User />} /> */}
+
+        {/* Query Params */}
+
+
+        <Route path='/user' element={<User />} />
+
       </Routes>
 
     </>
